@@ -5,12 +5,12 @@ Este proyecto contiene un ejemplo de solución **SAM + Jenkins**. Contiene una a
 ## Estructura
 
 A continuación se describe la estructura del proyecto:
-- **pipelines** - pipelines de Jenkins que permiten construir el CI/CD
-- **src** - en este directorio se almacena el código fuente de las funciones lambda con las que se va a trabajar
-- **test** - Tests unitarios y de integración. 
+- **pipelines** - Aquí encontramos los archivos jenkinsfile que nos permitirá crear los Pipelines en los distintos ambientes.
+- **src** - Esta carpeta contiene el código fuente de las funciones realizadas en python, y son las que se van a llamar a través del apigateway.
+- **test** - Aquí está almacenado la codificación de las pruebas unitarias y de integración.
 - **samconfig.toml** - Configuración de los stacks de Staging y Producción
-- **template.yaml** - Template que define los recursos AWS de la aplicación
-- **localEnvironment.json** - Permite el despliegue en local de la aplicación sobreescribiendo el endpoint de dynamodb para que apunte contra el docker de dynamo
+- **template.yaml** - Aquí están configurados los stacks default, staging y production.
+- **localEnvironment.json** - Estas sentencias permiten probar dynamodb en un ambiente local con docker.
 
 ## Despliegue manual de la aplicación SAM en AWS
 
